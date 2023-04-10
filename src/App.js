@@ -5,7 +5,9 @@ const App = () => {
     <div className="app">
       <section className="side-bar">
         <button>+ New chat</button>
-        <ul className="history"></ul>
+        <ul className="history">
+          <li>BLUGH</li>
+        </ul>
         <nav>
           <p>Made by Tanya</p>
         </nav>
