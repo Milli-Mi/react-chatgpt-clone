@@ -58,3 +58,14 @@ nav {
   text-align: center;
   
 }
+
+.info {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  padding: 10px;
+}
+
+.input-container {
+  position: relative;
+  
+}
