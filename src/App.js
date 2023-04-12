@@ -12,7 +12,9 @@ const App = () => {
           <p>Made by Tanya</p>
         </nav>
       </section>
-      <section className="main"></section>
+      <section className="main">
+        <h1>TanyaGPT</h1>
+      </section>
     </div>
   )
 }
