@@ -14,6 +14,8 @@ const App = () => {
       </section>
       <section className="main">
         <h1>TanyaGPT</h1>
+        <ul className="feed"></ul>
+        <div className="bottom-section"></div>
       </section>
     </div>
   )
