@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react"
+import React, { useState } from 'react';
 
-const App = () => {
+function App() {
 
-  const [ message, setMessage ] = useState(null)
+  const [message, setMessage] = useState(null);
 
-  const getMessages= async () => {
+  const getMessages = async () => {
     const options = {
       method: 'POST',
       body: JSON.stringify(
         {
           message: "hello how are you"
         }),
-        headers: {
-          "Content-Type": "application/json"
-        }
-    }
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
     try {
-      const response = await fetch('http://localhost:8000/templates', options)
-      const data =  await response.json()
-      console.log(data)
-      setMessage (data.choices[0].message)
+      const response = await fetch('http://localhost:8000/templates', options);
+      const data = await response.json();
+      console.log(data);
+      setMessage(data.choices[0].message);
 
     } catch (error) {
-      console.error(error)
+      console.error(error);
 
     }
-  }
+  };
 
 
   return (
@@ -44,14 +44,14 @@ const App = () => {
         <ul className="feed"></ul>
         <div className="bottom-section">
           <div className="input-container">
-            <input/>
+            <input />
             <div id="submit" onClick={getMessages}>➢ </div>
           </div>
           <p className="info">We’ve trained a model called ChatGPT which interacts in a conversational way. The dialogue format makes it possible for ChatGPT to answer followup questions, admit its mistakes, challenge incorrect premises, and reject inappropriate requests.</p>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default App;
