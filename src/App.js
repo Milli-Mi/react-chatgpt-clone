@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -12,14 +12,15 @@ function App() {
           message: "hello how are you"
         }),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type":"application/json"
       }
     };
     try {
       const response = await fetch('http://localhost:8000/templates', options);
       const data = await response.json();
       console.log(data);
-      setMessage(data.choices[0].message);
+      setMessage(data.choices?.[0].message);
+      console.log(data.choices[0].message);
 
     } catch (error) {
       console.error(error);

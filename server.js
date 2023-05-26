@@ -12,7 +12,7 @@ app.post('/templates', async (req, res) => {
     method: 'POST',
     headers: {
       "Authorization": `Bearer ${API_KEY}`,
-      "Content-Type": "application/json"
+      "Content-Type":"application/json"
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
